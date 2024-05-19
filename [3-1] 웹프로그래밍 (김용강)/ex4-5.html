@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>문서구조화</title>
+    <style>
+        hr {
+            width: 380px
+        }
+
+        #wrapper {
+            width: 600px;
+        }
+
+        header {
+            height: 120px;
+            background: blue;
+        }
+
+        hgroup h1 {
+            color: white;
+            padding: 10px 0 0 20px;
+        }
+
+        hgroup h5 {
+            color: white;
+            padding-left: 20px;
+        }
+
+        nav {
+            width: 580px;
+            height: 40px;
+            background: skyblue;
+            margin-left: 20px;
+        }
+
+        nav li {
+            float: left;
+            list-style-type: none;
+            padding: 0 15px;
+        }
+
+        section {
+            width: 400px;
+            background: #fff;
+            border: solid;
+            margin-top: 24px;
+        }
+
+        hgroup h2 {
+            padding: 5px 0 0 10px;
+        }
+
+        article {
+            width: 400px;
+            background: #ccc;
+        }
+
+        article p {
+            padding: 5px;
+        }
+
+        aside {
+            width: 200px;
+            height: 230px;
+            background: #666;
+            float: right;
+            margin-top: -250px;
+        }
+
+        hgroup h3 {
+            color: #fff;
+            padding: 10px 0 0 10px;
+        }
+
+        aside article {
+            width: 200px;
+            background: #666;
+            color: white;
+        }
+
+        footer {
+            height: 40px;
+            background: darkcyan;
+            margin-top: -15px;
+        }
+
+        footer p {
+            color: white;
+            padding: 10px 0 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <hgroup>
+                <h1>header</h1>
+                <h5>header의 두번째 제목입니다.</h5>
+            </hgroup>
+
+            <nav>
+                <ul>
+                    <li>메뉴1</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                    <li>메뉴4</li>
+                    <li>메뉴5</li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <hgroup>
+                    <h2>article 1</h2>
+                </hgroup>
+                <p>article 1의 본문입니다.</p>
+            </article>
+            <hr>
+            <article>
+                <hgroup>
+                    <h2>article 2</h2>
+                </hgroup>
+                <p>article 2의 본문입니다.</p>
+            </article>
+        </section>
+
+        <aside>
+            <article>
+                <hgroup>
+                    <h3>aside</h3>
+                </hgroup>
+                <p>aside의 본문입니다.</p>
+            </article>
+        </aside>
+
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+<!-- 페이지 영역 별로 나눠서 꾸미기 -->
