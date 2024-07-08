@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>카푸치노 만들기</title>
+
+    <style>
+        section {
+            margin-right: 520px;
+            border: 1px solid brown;
+            text-align: center;
+            position: relative;
+            /*부모 요소에 position: relative를 추가한다.*/
+        }
+
+        section li {
+            text-align: left;
+            padding: 7px;
+        }
+
+        ol {
+            list-style-type: none;
+            font-size: 12px;
+            margin: 20px 30px 10px 40px;
+        }
+
+        div {
+            list-style-type: none;
+            text-align: left;
+            position: absolute;
+            /*자식 요소에 position: absolute를 추가한다.*/
+            top: 70px;
+            left: 20px;
+            font-size: 25px;
+            color: green;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        div li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>카푸치노</h3>
+    </header>
+    <hr>
+    <section>
+        <h3>카푸치노 만드는 순서</h3>
+        <ol>
+            <li>에스프레소를 추출한다. 반드시 에스프레소 콩을 사용해야 제맛이 난다.</li>
+            <li>
+                적당한 용기에 우유를 넣어 중탄을 하거나 끓기 직전까지 데운다.
+            </li>
+            <li>
+                몇초간 저어 충분히 거품을 낸다. 거품이 충분하지 않으면 풍미가 떨어진다.
+            </li>
+            <li>
+                컵에 계피 막대를 꽂고 커피를 부은후 우유 거품을 붓는다. 휘핑크림을 얹고 계피가루를 뿌린다.
+            </li>
+        </ol>
+        <div>
+            <li>1.</li>
+            <li>2.</li>
+            <li>3.</li>
+            <li>4.</li>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<!-- <ol> 태그를 이용하여 레시피 페이지 작성 -->
