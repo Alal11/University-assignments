@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @keyframes move {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+                transform: translateX(300px);
+            }
+
+            50% {
+                background-color: blue;
+                transform: translate(300px, 300px);
+            }
+
+            75% {
+                background-color: green;
+                transform: translateY(300px);
+            }
+        }
+
+        h4 {
+            animation-name: move;
+            animation-duration: 5s;
+            background-color: red;
+            width: 100px;
+            height: 70px;
+            text-align: center;
+            padding-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Animation</h4>
+</body>
+
+</html>
+
+<!-- @keyframes를 이용하여 div 태그가 사각형을 그리며 색이 변하도록 작성하기 -->
