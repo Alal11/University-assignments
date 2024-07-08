@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>연습문제</title>
+    <style>
+        header h3 {
+            position: relative;
+            left: 10%;
+            width: 60%;
+            padding: 5px;
+            text-align: center;
+            border: medium double black;
+        }
+
+        header h3:hover {
+            border: medium solid lightcoral;
+            transition: 2s;
+            background-color: aliceblue;
+        }
+
+        section {
+            display: flex;
+        }
+
+        section p {
+            margin-right: 60px;
+        }
+
+        section img {
+            float: right;
+            border: thin solid black;
+            padding: 5px;
+            border-radius: 10px;
+            width: 100px;
+            height: 50px;
+        }
+
+        section img:hover {
+            width: 300px;
+            height: 150px;
+            border-radius: 30px;
+            transition: width 2s, height 2s, border-radius 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>5G (Wikipedia)</h3>
+    </header>
+    <section>
+        <p>5G networks are cellular networks, in which the service area is divided into small geographical areas called
+            cells. All 5G wireless devices in a cell communicate by radio waves with a cellular base station via fixed
+            antennas, over frequency channels assigned by the base station. The base stations, termed gNodeBs, are
+            connected to switching centers in the telephone network and routers for Internet access by high-bandwidth
+            optical fiber or wireless backhaul connections.</p>
+        <img src="/webclass/images/banana.jpg">
+    </section>
+</body>
+
+</html>
+
+<!-- 제목과 오른쪽 그림에 마우스 커서가 올라갈 때 효과 주기 -->
