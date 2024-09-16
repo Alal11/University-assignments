@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wi-Fi</title>
+    <style>
+        header {
+            background-color: aliceblue;
+            width: 96%;
+            height: 120px;
+            padding: 5px 0 5px 10px;
+            margin: 0 10px 0 10px;
+            box-shadow: 8px 8px 15px -12px;
+            border-radius: 0 20px 0 20px; /*테두리 둥글게*/
+        }
+
+        thead {
+            color: rgb(5, 5, 200);
+            background-color: aliceblue;
+        }
+
+        table, th, td {
+            border-collapse: collapse; /*중복된 테두리 합치기*/
+            border: 1px solid gray; /*테두리 굵기와 색*/
+            font-size: 15px;
+            padding: 5px 10px 5px 5px;
+        }
+
+        table {
+            border: 2px solid;
+        }
+
+        th {
+            padding: 5px 30px 5px 30px
+        }
+
+    </style>
+</head>
+
+<body>
+<header>
+    <h2>Wi-Fi</h2>
+    <h3>IEEE 802.11ac and IEEE 802.11ax</h3>
+</header>
+<section>
+    <h3>Brief introdunction</h3>
+    <details>
+        <summary>IEEE 802.11ac</summary>
+        <p>
+            IEEE 802.11ac is an amendment to IEEE 802.11, pubblished in December 2013, that build on 802.11n. The
+            802.ac standard was retroactively labelled as Wi-Fi 5 by the Wi-Fi Alliance.
+        </p>
+    </details>
+    <br>
+    <details>
+        <summary>IEEE 802.11ax</summary>
+        <p>
+            IEEE 802.11ax the successor to 802.11ac, marketed as Wi-Fi 6 (2.4 GHz and 5GHz) by the Wi-Fi Alliance.
+            It is also known as High Efficiency Wi-Fi, for the overall improvements to Wi-Fi 6 cilents under dense
+            environments.
+        </p>
+    </details>
+</section>
+<section>
+    <h3>Comparison</h3>
+    <table border="1">
+        <thead>
+        <th>Protocol</th>
+        <th>Release data</th>
+        <th>Frequency</th>
+        <th>Bandwidth</th>
+        <th>Data rate</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="4">IEEE 802.11ac</td>
+            <td rowspan="4">Dec. 2013</td>
+            <td rowspan="4">5GHz</td>
+            <td>20MHz</td>
+            <td>Up to 346.8 Mbps</td>
+        </tr>
+        <tr>
+            <td>40MHz</td>
+            <td>Up to 800 Mbps</td>
+        </tr>
+        <tr>
+            <td>80MHz</td>
+            <td>Up to 1733.2 Mbps</td>
+        </tr>
+        <tr>
+            <td>160MHz</td>
+            <td>Up to 3466.8 Mbps</td>
+        </tr>
+
+        <tr>
+            <td rowspan="4">IEEE 802.11ax</td>
+            <td rowspan="4">Feb. 2021</td>
+            <td rowspan="4">2.4, 5, 6GHz</td>
+            <td>20MHz</td>
+            <td>Up to 1147 Mbps</td>
+        </tr>
+        <tr>
+            <td>40MHz</td>
+            <td>Up to 2294 Mbps</td>
+        </tr>
+        <tr>
+            <td>80MHz</td>
+            <td>Up to 4803 Mbps</td>
+        </tr>
+        <tr>
+            <td>80+80MHz</td>
+            <td>Up to 9608 Mbps</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+
+</html>
+
+<!-- 표제와 표 꾸미기 -->
