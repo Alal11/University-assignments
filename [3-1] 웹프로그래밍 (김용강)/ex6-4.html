@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>별 문자 출력하기</title>
+    <script>
+        function printstar(n) {
+            var m = parseInt(n);
+            if (isNaN(m) || m < 1) {
+                document.write("입력 오류 입니다. <br>");
+                return;
+            }
+
+            for (var i = 1; i <= m; i++) {
+                for (var j = 0; j < i; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <h3>별 문자 출력하기</h3>
+    <hr>
+
+    <script>
+        var num = prompt("정수를 입력하세요");
+        printstar(num);
+    </script>
+</body>
+
+</html>
+
+<!-- 양의 정수를 입력 받아 개수만큼 *을 출력하기 -->
