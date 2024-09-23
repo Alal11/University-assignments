@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>큰 자리수와 낮은자리수</title>
+    <script>
+        function compare(n) {
+            var num = parseInt(n);
+            if (isNaN(num)) {
+                document.write("입력 오류 입니다. <br>");
+                return;
+            }
+
+            var smallNum = num % 10;
+            var bigNum = num;
+
+            while (bigNum >= 10) {
+                bigNum = Math.floor(bigNum / 10);
+            }
+
+            if (smallNum == bigNum) {
+                document.write(num + ": 같음");
+            } else {
+                document.write(num + ": 다름");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <h3>큰 자리수와 낮은자리수 같은지 비교</h3>
+    <hr>
+    <script>
+        var n = prompt("숫자 입력");
+        compare(n);
+    </script>
+</body>
+
+</html>
+
+<!-- 사용자로부터 숫자를 입력 받고 제일 큰 자리 수와 제일 낮은 자리 수가 같은지 판단하기 -->
