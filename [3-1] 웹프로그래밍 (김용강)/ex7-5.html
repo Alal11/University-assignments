@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>난수</title>
+    <script>
+        function randomNumber() {
+            return Math.floor(Math.random() * 100) + 1;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h3>난수 10 개 생성</h3>
+    <hr>
+    <script>
+        var size = 10;
+        var arr = new Array();
+        for (var i = 0; i < size; i++) {
+            arr[i] = randomNumber();
+            document.write(arr[i] + " ");
+        }
+        document.write("<br><hr>");
+        // Array.sort()는 기본적으로 문자열로 변환한 각 요소를 기준으로 정렬하기 때문에 숫자로 정렬할 때는 제대로 동작하지 않을 수 있다. 따라서 아래와 같이 비교 함수를 제공해줘야 한다.
+        arr.sort(function (a, b) {
+            if (a > b) return 1;
+            if (a == b) return 0;
+            if (a < b) return -1;
+        });
+        document.write("제일 큰 수는 " + arr[size - 1]);
+        document.write("<br><hr>");
+
+        for (var i = 0; i < size; i++) {
+            document.write(arr[i] + " ");
+        }
+
+    </script>
+</body>
+
+</html>
+
+<!-- 1~100의 값을 갖는 랜덤 숫자 10개를 배열에 저장하고 최댓값과 오름차순으로 정렬하여 출력하기 -->
