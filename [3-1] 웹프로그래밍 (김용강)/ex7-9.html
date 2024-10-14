@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>book 객체 배열 만들기</title>
+
+</head>
+
+<body>
+    <h3>book 객체 배열 만들기</h3>
+    <hr>
+    <script>
+        var maxPrice = 0;
+        var bookArr = [];  // 빈 배열[] 생성 Array() : 여러개의 값을 순서대로 저장할 수 있음
+        var maxBook = "";
+
+        for (var i = 0; i < 3; i++) {
+            var str = prompt("콤마(,)로 분리하면서 책제목 저자 가격 순으로 입력");
+
+            var info = str.split(",");
+
+            var book = new Object();  // 빈 객체{} 생성 Object() : 이름과 값의 쌍을 저장하며 속성을 가질 수 있음
+            book.name = info[0];
+            book.author = info[1];
+            book.price = info[2];
+
+            if (book.price > maxPrice) {
+                maxPrice = book.price;
+            }
+
+            bookArr.push(book);
+        }
+
+
+        for (var j = 0; j < 3; j++) {
+
+            document.write(bookArr[j].name, ", ");
+            document.write(bookArr[j].author, ", ");
+            document.write(bookArr[j].price, "<br>");
+
+            if (bookArr[j].price == maxPrice) {
+                maxBook = bookArr[j].name;
+            }
+        }
+
+        document.write("<hr>");
+
+        document.write("가장 가격이 비싼 책은 " + maxBook);
+
+    </script>
+</body>
+
+</html>
+
+<!-- book 객체를 생성하고, prompt()를 이용하여 세 개의 책 정보를 입력받은 후 가장 비싼 책의 이름 출력하기 -->
