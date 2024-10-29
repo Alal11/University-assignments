@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>계산해봅시다</title>
+    <script>
+        function showResult(element, expression) {
+            var result = expression;
+            element.innerText = result;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>계산해봅시다</h3>
+    <hr>
+    <div>2 + 4 = <span onclick="showResult(this, 2 + 4)">답</span></div>
+    <br>
+    <div>4 * 20 + 64 = <span onclick="showResult(this, 4 * 20 + 64)">답</span></div>
+    <br>
+    <div>20/5-8*2 = <span onclick="showResult(this,20/5-8*2)">답</span></div>
+</body>
+
+</html>
+
+<!-- "답"을 클릭하면 계산 결과를 출력하는 프로그램 작성하기 -->
