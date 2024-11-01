@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>innerHTML</title>
+    <script>
+        function changeText(element) {
+            var newText = prompt("HTML 텍스트 혹은 그냥 텍스트를 입력하세요.");
+
+            if (newText != null) {
+                element.innerHTML = newText;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>innerHTML</h3>
+    <hr>
+    <p onclick="changeText(this)">이번 여름에는 어디로 여행을 갈까요?</p>
+</body>
+
+</html>
+
+<!-- p 태그 텍스트를 클릭하면 prompt() 창을 출력하고, 사용자가 입력한 html 텍스트로 p 태그 내용 바꾸기 -->
