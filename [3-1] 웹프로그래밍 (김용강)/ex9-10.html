@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>라면을 끓이는 순서</title>
+    <style>
+        ol {
+            background-color: rgb(140, 198, 86);
+        }
+    </style>
+    <script>
+        function addList() {
+            var inputText = prompt("라면을 끓이는 순서를 입력하라");
+            var ol = document.querySelector('ol');
+            var li = document.createElement('li');
+            li.innerHTML = inputText;
+            ol.appendChild(li);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr>
+    <ol type="A" onclick="addList()">
+        <li>물을 끓인다.</li>
+    </ol>
+</body>
+
+</html>
+
+
+<!-- 리스트가 풀력된 영역을 클릭하면 prompt() 함수를 띄우고, 입력받은 문자열을 삽입하는 프로그램 작성하기 -->
