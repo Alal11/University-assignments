@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM 객체 동적 삽입</title>
+    <script>
+        function anwerButton(button) {
+            var parent = button.parentNode;
+            var answer = parent.querySelector('.answer');
+
+            if (!answer) {
+                var newAnswer = document.createElement('p');
+                if (button.innerText === "A1") {
+                    newAnswer.innerText = "Reinforcement Learning";
+                } else if (button.innerText === "A2") {
+                    newAnswer.innerText = "Supervised Learning";
+                } else if (button.innerText === "A3") {
+                    newAnswer.innerText = "Unsupervised Learning";
+                }
+
+                // 답변 요소를 클릭하면 제거하는 이벤트 리스너
+                newAnswer.onclick = function () {
+                    newAnswer.remove();
+                };
+
+                parent.insertBefore(newAnswer, button.nextSibling);
+
+            }else{
+                // 답변이 이미 있는 경우, 이를 제거한다.
+                answer.remove();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>정답의 동적 삽입</h3>
+    <hr>
+
+    <p>Q1. What is the learning technique that intelligent agents ought to take actions in an environment in order to
+        maximize the notion of cumulative reward?</p>
+
+    <button onclick="anwerButton(this)">A1</button>
+
+    <p>Q2. What is the learning technique that maps an input to an output based on example input-outpat paris? (It
+        infers a function from labevled training data consisting of a set training examples.)</p>
+
+    <button onclick="anwerButton(this)">A2</button>
+
+    <p>Q3. What is the learning technique that learns patterns from untagged data? (Contrast to the supervised learning,
+        it exhibits self-organization that captures patterns as probability densities or a combination of neural feature
+        preferences.)</p>
+
+    <button onclick="anwerButton(this)">A3</button>
+
+</body>
+
+</html>
+
+<!-- 답보기 버튼을 누르면 정답이 출력되고, 출력된 정답을 클릭하면 정답이 다시 제거되는 프로그램 작성하기 -->
