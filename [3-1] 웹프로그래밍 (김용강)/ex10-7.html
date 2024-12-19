@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>onmousemove</title>
+
+    <script>
+        var cursor;
+        function makeCursor() {
+            cursor = document.getElementById("cursorImage");
+
+            // 매우 높은 z-index 값을 주어 무엇보다 위에 나타나게 함
+            // 이 라인은 없어도 됨
+            cursor.style.zIndex = 100;
+
+            document.onmousemove = function (e) {
+                cursor.style.left = event.clientX + "px";  // 단위 "px"을 꼭 붙여야 함
+                cursor.style.top = event.clientY + "px";
+            }
+        }
+    </script>
+</head>
+
+<body onload="makeCursor()">
+    <h3>이미지 커서 만들기</h3>
+    <hr>
+    <p>마우스를 움직이면 이미지로 만든 커서가 마우스를 따라 다닙니다</p>
+    <div id="cursorImage" style="position: absolute;">
+        <img src="/webclass/images/spongeBob.png" alt="스폰지밥" height="50px" width="50px">
+    </div>
+
+</body>
+
+</html>
+
+<!-- Onmousemove를 이용하여 웹 페이지에서 마우스가 움직일 때 이미지를 마우스 커서처럼 사용하도록 웹페이지 작성하기 -->
