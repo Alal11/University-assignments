@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>setTimeout()/clearTimeout()</title>
+
+    <style>
+        #clock {
+            font-size: 20px;
+            border: 2px solid lightgrey;
+            background-color: aliceblue;
+            width: 150px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        var timer;
+
+        function startClock() {
+            var clockDiv = document.getElementById("clock");
+
+            function updateClock() {
+                var now = new Date();
+
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+
+                var ampm = hours >= 12 ? '오후' : '오전';
+                hours = hours % 12;
+                hours = hours ? hours : 12; // 0을 12로 변환
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+
+                var timeString = ampm + " " + hours + ":" + minutes + ":" + seconds;
+                clockDiv.innerText = timeString;
+                timer = setTimeout(updateClock, 1000);
+            }
+            updateClock();
+        }
+
+        function stopClock() {
+            clearTimeout(timer);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            startClock();
+        });
+    </script>
+</head>
+
+<body>
+    <h3>div 태그에 시계 만들기</h3>
+    <hr>
+    <div id="clock"></div>
+</body>
+
+</html>
+
+<!-- setTimeout()과 clearTimeout()을 이용하여 <div> 태그에 시계 구현. 웹 페이지가 로드되면 즉각 현재 시각에서부터 시계 동작하기 -->
