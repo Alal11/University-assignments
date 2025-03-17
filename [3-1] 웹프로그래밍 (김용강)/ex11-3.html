@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>setInterval()/clearInterval()</title>
+    <style>
+        #clock {
+            font-size: 20px;
+            border: 2px solid lightgrey;
+            background-color: aliceblue;
+            width: 150px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var timer;
+        var running = false;
+
+        function startClock() {
+            if (!running) {
+                running = true;
+                updateClock(); // 즉시 시계 업데이트
+                timer = setInterval(updateClock, 1000);
+            }
+        }
+
+        function stopClock() {
+            if (running) {
+                running = false;
+                clearInterval(timer);
+            }
+        }
+
+        function updateClock() {
+            var clockDiv = document.getElementById("clock");
+            
+            var now = new Date();
+            
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            
+            var ampm = hours >= 12 ? '오후' : '오전';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // 0을 12로 변환
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            
+            var timeString = ampm + " " + hours + ":" + minutes + ":" + seconds;
+            clockDiv.innerText = timeString;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var clockDiv = document.getElementById("clock");
+            startClock(); // 페이지 로드 시 시계 시작
+
+            clockDiv.addEventListener('click', function () {
+                if (running) {
+                    stopClock();
+                } else {
+                    startClock();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h3>div 태그에 시계 만들기</h3>
+    <p>시계를 클릭하면 시계가 멈추고 다시 클릭하면 가기 시작한다.</p>
+    <hr>
+    <div id="clock"></div>
+</body>
+
+</html>
